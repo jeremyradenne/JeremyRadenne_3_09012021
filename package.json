@@ -1,0 +1,13 @@
+{
+  "name": "p3",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "sass --watch ./src/assets/app.scss:./src/public/style.css --no-source-map",
+    "build": "sass ./src/assets/app.scss:./src/public/style.css --no-source-map --style compressed"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "sass": "^1.32.2"
+  }
+}

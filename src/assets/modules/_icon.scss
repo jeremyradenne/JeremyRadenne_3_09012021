@@ -1,0 +1,62 @@
+.heart-icon {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: 0;
+  z-index: 2;
+  overflow: hidden;
+  @include mask("img/icon/heart-solid.svg", $white);
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    overflow: hidden;
+    transition: all $transition ease-in;
+    z-index: 3;
+    @include mask("img/icon/heart-regular.svg", $black);
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    left: 0;
+    bottom: 0;
+    transition: all $transition ease-in 0.1s;
+    z-index: 4;
+    @include mask-linear("img/icon/heart-solid.svg", $primaire, $secondaire);
+  }
+
+  &:hover {
+    &::before {
+      transition: all $transition ease-out;
+      width: 25px;
+      height: 25px;
+    }
+
+    &::after {
+      transition: all $transition ease-out;
+      @include mask-linear(
+        "img/icon/heart-regular.svg",
+        $primaire,
+        $secondaire
+      );
+    }
+  }
+}
+
+.arrow-left-icon {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 25px;
+  left: 21px;
+  @include mask("img/icon/arrow-left.svg", $black);
+
+  &:hover {
+    background: $linear-gradient;
+  }
+}

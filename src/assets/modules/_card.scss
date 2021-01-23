@@ -1,0 +1,56 @@
+.card {
+  position: relative;
+  margin: 10px;
+  width: 100%;
+  max-width: 400px;
+  border-radius: 20px;
+  background-color: $white;
+  box-shadow: $box-shadow-ligth;
+  transition: $transition;
+
+  &:hover {
+    box-shadow: $box-shadow;
+  }
+
+  @include max-width(830) {
+    margin: 20px 0;
+  }
+}
+
+.card-img {
+  img {
+    width: 100%;
+    max-height: 174px;
+    object-fit: cover;
+    border-radius: 20px 20px 0 0;
+  }
+
+  span {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 10px 15px;
+    padding: 10px 20px;
+    color: $green;
+    border-radius: 3px;
+    background-color: $green-light;
+  }
+}
+
+.card-body {
+  padding: 12px 23px 10px 12px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  p {
+    margin: 5px 0;
+    letter-spacing: 0.5px;
+  }
+}
+
+.card-icon {
+  position: relative;
+  margin-top: 5px;
+  cursor: pointer;
+}

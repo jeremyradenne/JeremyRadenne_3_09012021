@@ -1,0 +1,83 @@
+// Mask
+// ==================
+@mixin mask($img, $color) {
+  mask: url($img);
+  -webkit-mask: url($img);
+  mask-size: cover;
+  -webkit-mask-size: cover;
+  background-color: $color;
+}
+
+@mixin mask-linear($img, $color1, $color2) {
+  mask: url($img);
+  -webkit-mask: url($img);
+  mask-size: cover;
+  -webkit-mask-size: cover;
+  background: linear-gradient(0deg, #{$color1} 0%, #{$color2} 100%);
+}
+
+// Responsive
+// ==================
+@mixin max-width($size) {
+  @media (max-width: $size * 1px) {
+    @content;
+  }
+}
+@mixin min-width($size) {
+  @media (min-width: $size * 1px) {
+    @content;
+  }
+}
+
+// Tuile
+// ==================
+@mixin tuile($logo) {
+  position: relative;
+  height: 70px;
+  width: 320px;
+  margin: 8px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  background-color: $gray-light;
+  border-radius: 15px;
+  box-shadow: $box-shadow-ligth;
+  cursor: pointer;
+  transition: $transition;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 35px;
+    right: auto;
+    width: 20px;
+    height: 20px;
+    @include mask($logo, $black-light);
+    transition: $transition;
+  }
+
+  &:hover {
+    background-color: rgba($primaire, 0.2);
+
+    &::before {
+      background: $primaire;
+    }
+  }
+
+  &:last-child {
+    margin-bottom: 72px;
+  }
+
+  span {
+    position: relative;
+    left: -12px;
+    color: $white;
+    padding: 3px 8px;
+    border-radius: 100%;
+    background-color: $primaire;
+  }
+
+  p {
+    padding: 20px 0 20px 50px;
+  }
+}

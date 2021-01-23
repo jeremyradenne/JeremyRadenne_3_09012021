@@ -1,0 +1,79 @@
+// Variables colors
+// ==================
+$primaire: #9356dc;
+$secondaire: #ff79da;
+$tertiaire: #99e2d0;
+$black: #000;
+$black-light: #353535;
+$gray: rgba(#eaeaea, 0.8);
+$gray-light: #f6f6f6;
+$green: #008766;
+$green-light: #99e2d0;
+$white: #fff;
+
+// Variables shadow
+// ==================
+$box-shadow: 1px 5px 12px rgba(100, 100, 100, 0.7);
+$box-shadow-ligth: 1px 5px 12px rgba(100, 100, 100, 0.35);
+
+// Variables linear-gradient
+// ==================
+$linear-gradient: linear-gradient(0deg, #{$primaire} 0%, #{$secondaire} 100%);
+$linear-gradient-light: linear-gradient(
+  0deg,
+  #{lighten($primaire, 3)} 0%,
+  #{lighten($secondaire, 3)} 100%
+);
+
+// Variables containers
+// ==================
+$container-padding: 20px;
+$container-width: calc(100% - #{$container-padding} * 2);
+$container-max-width: 1100px;
+
+// Transition
+// ==================
+$transition: 0.3s;
+$transition-long: 0.5s;
+
+// Variables fonts
+// ==================
+$font: "Roboto", sans-serif;
+$font-title: "Shrikhand", cursive;
+
+// Outils
+// ==================
+@import "tools/reset";
+@import "tools/mixins";
+@import "tools/layout";
+@import "tools/typography";
+@import "tools/animations";
+
+// Generic
+// ==================
+body {
+  font-family: $font;
+  font-size: 16px;
+  color: $black;
+  // background: linear-gradient(
+  //     to top,
+  //     rgba(255, 255, 255, 0.7),
+  //     rgba(255, 255, 255, 0.7)
+  //   ),
+  //   url(img/accueil.png) top center no-repeat;
+  background-color: $white;
+}
+
+// Modules
+// ==================
+@import "modules/loader";
+@import "modules/header";
+@import "modules/btn";
+@import "modules/icon";
+@import "modules/card";
+@import "modules/footer";
+
+// Pages
+// ==================
+@import "pages/home";
+@import "pages/menu";

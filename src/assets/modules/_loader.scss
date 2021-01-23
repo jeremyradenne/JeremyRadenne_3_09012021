@@ -1,0 +1,61 @@
+.loader {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background: linear-gradient(0deg, #{$white} 0%, #{$gray-light} 100%);
+  text-align: center;
+  z-index: 5;
+  animation: loader 3s;
+
+  p {
+    position: absolute;
+    top: calc(50% + 70px);
+    left: calc(50% - 60px);
+    font-size: 22px;
+    color: $black-light;
+  }
+
+  .status {
+    position: absolute;
+    top: 50%;
+    left: calc(50% - 25px);
+    width: 50px;
+    height: 50px;
+    border-radius: 15px;
+    animation: rotation 1s 3;
+
+    .shape {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      border-radius: 10px;
+    }
+
+    .shape-1 {
+      left: 0;
+      background-color: $primaire;
+      animation: shape1 $transition-long 6 alternate;
+    }
+
+    .shape-2 {
+      right: 0;
+      background-color: $secondaire;
+      animation: shape2 $transition-long 6 alternate;
+    }
+
+    .shape-3 {
+      bottom: 0;
+      background-color: $secondaire;
+      animation: shape3 $transition-long 6 alternate;
+    }
+
+    .shape-4 {
+      bottom: 0;
+      right: 0;
+      background-color: $primaire;
+      animation: shape4 $transition-long 6 alternate;
+    }
+  }
+}

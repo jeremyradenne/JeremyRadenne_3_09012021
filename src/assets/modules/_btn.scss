@@ -1,0 +1,23 @@
+.btn {
+  min-width: 217px;
+  padding: 16px 20px;
+  font-size: 15px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  background: $linear-gradient;
+  color: $white;
+  border-radius: 25px;
+  box-shadow: $box-shadow-ligth;
+  transition: $transition;
+
+  &:hover {
+    background: $linear-gradient-light;
+    box-shadow: $box-shadow;
+  }
+
+  &:focus {
+    outline: 0;
+  }
+}

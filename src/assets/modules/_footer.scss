@@ -1,0 +1,36 @@
+footer {
+  padding: 40px 4px 20px;
+  background-color: $black-light;
+  color: $white;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+
+    ul {
+      display: flex;
+      justify-content: space-around;
+      flex-direction: column;
+    }
+  }
+
+  .logo {
+    width: 100px;
+    height: 17px;
+    @include mask("img/logo/ohmyfood@2x.svg", $white);
+  }
+
+  li {
+    margin: 0 0 7px;
+
+    &:first-child {
+      margin-top: 23px;
+    }
+  }
+}
+
+.footer-icon {
+  width: 12px;
+  height: 12px;
+  margin-right: 10px;
+}

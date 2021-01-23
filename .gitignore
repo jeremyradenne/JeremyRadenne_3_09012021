@@ -1,0 +1,25 @@
+# dependencies
+/node_modules
+
+# docs
+/docs
+
+# slide
+/P3.key
+/P3.pptx
+/P3.pdf
+
+# img
+/src/public/img/accueil.png
+/src/public/img/menu_delice.png
+/src/public/img/menu_enchantée.png
+/src/public/img/menu_française.png
+/src/public/img/menu_palette.png
+
+# debug
+/yarn-debug.log*
+/yarn.lock
+/yarn-error.log*
+
+.DS_Store
+.DS_Store?
